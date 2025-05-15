@@ -64,9 +64,7 @@ struct SignInView: View {
                 Divider()
                     .padding()
                 
-                Button {
-                    print("Clicado")
-                } label: {
+                NavigationLink(destination: SignUpView()) {
                     Text("Não tem uma conta? Clique aqui")
                         .foregroundColor(Color.black)
                 }
