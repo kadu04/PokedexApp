@@ -6,9 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 @main
 struct PokedexAppApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+//        try! Auth.auth().signOut()
+    }
+    
     var body: some Scene {
         WindowGroup {
             SignInView()

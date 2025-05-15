@@ -16,13 +16,13 @@ struct SignUpView: View {
             Text("Cadastro")
                 .font(.system(size: 44, weight: .bold, design: .serif))
                 .foregroundColor(.indigo)
-                .padding(.top, -20)
+                .padding(.top, -45)
             
             Image("logo_pokemon")
                 .resizable()
                 .frame(width: 290, height: 290)
                 .scaledToFit()
-                .padding(.bottom, 10)
+                .padding(.bottom, 5)
             
             TextField("Entre com seu nome", text: $viewModel.name)
                 .autocapitalization(.none)
@@ -60,6 +60,11 @@ struct SignUpView: View {
                 )
                 .padding(.bottom, 30)
             
+            if viewModel.isLoading {
+                ProgressView()
+                    .padding()
+            }
+            
             Button {
                 viewModel.signUp()
             } label: {
@@ -70,7 +75,9 @@ struct SignUpView: View {
                     .foregroundColor(.white)
                     .cornerRadius(24.0)
             }
-
+            .alert(isPresented: $viewModel.formInvalid) {
+                Alert(title: Text(viewModel.alertText))
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
