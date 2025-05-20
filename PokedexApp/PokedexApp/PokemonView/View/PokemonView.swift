@@ -24,7 +24,7 @@ struct PokemonView: View {
         NavigationView {
             List {
                 ForEach(filteredPokemon) { poke in
-//                    NavigationLink(destination: PokemonDetailView(pokemon: poke)) {
+                    NavigationLink(destination: PokemonDetailView(pokemon: poke)) {
                         HStack {
                             VStack(alignment: .leading, spacing: 5) {
                                 HStack {
@@ -55,7 +55,7 @@ struct PokemonView: View {
                                 .resizable()
                                 .frame(width: 100, height: 100)
                         }
-//                    }
+                    }
                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(action: { addFavorite(pokemon: poke)}) {
                             Image(systemName: "star")
