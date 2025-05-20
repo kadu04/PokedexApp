@@ -71,8 +71,8 @@ struct PokemonView: View {
                     Button("Logout") {
                         viewModel.logout()
                     }
-//                    .font(FontMaker.makeFont(.poppinsBold, 18))
-//                    .foregroundStyle(PokedexColors.blue)
+                    .font(FontMaker.makeFont(.poppinsBold, 18))
+                    .foregroundStyle(PokedexColors.blue)
                 }
             }
             .navigationTitle("Pokemon")
