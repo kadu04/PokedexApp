@@ -65,7 +65,9 @@ struct SignInView: View {
                         .cornerRadius(24.0)
                 }
                 .alert(isPresented: $viewModel.formInvalid) {
-                    Alert(title: Text(viewModel.alertText))
+                    Alert(title: Text(viewModel.alertText),
+                          dismissButton: .cancel(Text("Ok")
+                            .fontWeight(.semibold)))
                 }
                 
                 Divider()

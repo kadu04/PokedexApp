@@ -14,7 +14,7 @@ class SignInViewModel: ObservableObject {
     @Published var password = ""
     
     @Published var formInvalid = false
-    var alertText = ""
+    var alertText = "Ocorreu um erro! Verifique o email ou a senha, e tente novamente."
     
     @Published var isLoading = false
     
@@ -27,7 +27,6 @@ class SignInViewModel: ObservableObject {
             result, err in
             guard let user = result?.user, err == nil else {
                 self.formInvalid = true
-                self.alertText = err!.localizedDescription
                 print(err)
                 self.isLoading = false
                 return

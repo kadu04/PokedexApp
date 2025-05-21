@@ -76,7 +76,8 @@ struct SignUpView: View {
                     .cornerRadius(24.0)
             }
             .alert(isPresented: $viewModel.formInvalid) {
-                Alert(title: Text(viewModel.alertText))
+                Alert(title: Text(viewModel.alertText),
+                      dismissButton: .cancel(Text("Ok")))
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
