@@ -71,7 +71,7 @@ struct SignUpView: View {
                 Text("Salvar")
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color("AzulEscuro"))
+                    .background(Color("DarkBlue"))
                     .foregroundColor(.white)
                     .cornerRadius(24.0)
             }

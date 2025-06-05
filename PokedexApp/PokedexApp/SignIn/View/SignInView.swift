@@ -60,7 +60,7 @@ struct SignInView: View {
                     Text("Entrar")
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color("AzulEscuro"))
+                        .background(Color("DarkBlue"))
                         .foregroundColor(Color.white)
                         .cornerRadius(24.0)
                 }
